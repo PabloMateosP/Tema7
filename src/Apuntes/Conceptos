@@ -1,0 +1,55 @@
+TEMA 7: ENTRADA Y SALIDA DE INFORMACIÓN
+
+A la hora del uso de nuestro ordenador tiene que haber una comunicación dual entre la máquina y el usuario, pues a la hora de crear
+un programa es igual, así como los métodos los cuales tienen unos parámetros de entrada y salida según la necesidad que este tenga.
+
+ - Índice de contenidos
+1. Interfaces de entrada y salida
+2. Flujo de datos
+    a. Tipos de flujos
+    b. Flujos predeterminados
+    c. Clase Scanner
+    d. Utilización de flujos mediante sus clases
+3. Ficheros y directorios
+    a. Tipos
+    b. Creación y eliminación
+    c. Escritura y lectura
+    d. Otras operaciones
+4. Serialización
+5. XML en Java
+
+- 1. INTERFACES DE ENTRADA Y SALIDA
+Los programas deben poder comunicarse con otros programas o bien con el usuario utilizando algún dispositivo.
+Para realizar la comunicación se usan interfaces (en sentido más general)
+    - Interfaces de entrada
+    - Interfaces de salida
+
+-- Entrada y Salida De Información
+Cualquier programa que desee interactuar o trabajar con datos debe tener la capacidad de leer y/o escribir datos --> argumentos y parámetros
+Parámetros de entrada --> input
+Parámetros de salida --> output
+
+- 2. FLUJO DE DATOS
+En java la entrada y salida de datos se lleva a cabo mediante flujos de datos --> Streams
+Flujo de datos --> Secuencia ordenada de datos que se transmite desde un origen hasta un destino
+
+-- A. TIPOS
+   - Según el sentido del flujo
+    - Flujo de Entrada --> Se Lee información
+    - Flujo de Salida --> Se Escribe información
+
+   - Según la forma de acceder al flujo
+    - Flujo de acceso directo --> Se accede directamente al elemento deseado
+    - Flujo de acceso secuencial --> Para acceder al elemento deseado hay que pasar por los anteriores
+
+   - Según el tipo de datos del flujo
+    - Flujo de caracteres --> Los datos se codifican en caracteres
+    - Flujoo de bytes --> Los datos no se codifican
+
+-- B. FLUJOS PREDETERMINADOS
+   Mientras se ejecuta el programa, se mantienen abiertos algunos flujos de datos para ser usados sin necesidad
+   de crearlos manualmente
+   Estos son:
+   - System.out
+   - System.err
+   - System.in
