@@ -1,4 +1,4 @@
-package Ejercicios_Clase.XML;
+package Ejercicios_Clase.EjerciciosDiapositiva.Ejercicio11;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -12,11 +12,11 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 
-public class EjemploLecturaXML {
+public class Ejercicio11 {
     public static void main(String[] args) throws ParserConfigurationException, IOException, SAXException {
 
         // Cargamos fichero que vamos a leer
-        File file = new File("Ejercicios_Clase/XML/ejemplo.xml");
+        File file = new File("Ejercicios_Clase/EjerciciosDiapositiva/Ejercicio11/numeros.xml");
         //IMPORTANTE: Hay que poner la ruta de darlo al botón derecho encima del archivo y donde pone copy path
         // --> path from source root
 
@@ -33,18 +33,18 @@ public class EjemploLecturaXML {
             //Nos dará de tipo 1, ya que es un elemento
 
             // Accedemos a todos los nodos con el tag "estudiante" --> En la práctica 7 podemos sacar las participaciones de esta forma
-            NodeList estudiantes = document.getElementsByTagName("estudiante");
+            NodeList nombre = document.getElementsByTagName("nombre");
 
-            //Con el:  estudiantes.GetChildNodes para sacar el hijo de estudiante
+            //Con el: estudiantes.GetChildNodes para sacar el hijo de estudiante
 
             // Recorremos todos esos nodos
             // Para la práctica 7 debemos de meter además de sacar el nombre del alumno sacar la participación de este.
-            for (int i = 0; i < estudiantes.getLength(); i++) {
-                Node nodeEstudiante = estudiantes.item(i);
+            for (int i = 0; i < nombre.getLength(); i++) {
+                Node nodeContacto = nombre.item(i);
                 // Filtramos todos los que son nodos de tipo elemento
-                if (nodeEstudiante.getNodeType() == Node.ELEMENT_NODE) {
-                    Element elementEstudiante = (Element) nodeEstudiante;
-                    System.out.println("Nombre del estudiante: " + elementEstudiante.getTextContent());
+                if (nodeContacto.getNodeType() == Node.ELEMENT_NODE) {
+                    Element elementContacto = (Element) nodeContacto;
+                    System.out.println("Nombre del contacto: " + elementContacto.getTextContent());
                 }
             }
         } catch(Exception e) { //No es buena práctica lanzar Exception, ya que no va a dar la información perteneciente a la verdadera excepción que es.
