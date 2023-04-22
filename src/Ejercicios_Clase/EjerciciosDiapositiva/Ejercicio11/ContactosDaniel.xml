@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<contactos>
+    <contacto>
+        <nombre>Robert</nombre>
+        <apellidos>Wido</apellidos>
+        <direccion>Calle Manolo Lama Nº13</direccion>
+    </contacto>
+    <contacto>
+        <nombre>Maria</nombre>
+        <apellidos>Antonella</apellidos>
+        <direccion>Avenida Canada s/n</direccion>
+    </contacto>
+    <contacto>
+        <nombre>Daniel</nombre>
+        <apellidos>Pérez Méndez</apellidos>
+        <direccion>Calle Padre Paquillo Nº7</direccion>
+    </contacto>
+    <contacto>
+        <nombre>Pedro</nombre>
+        <apellidos>Piqueras</apellidos>
+        <direccion>Calle Trece s/n</direccion>
+    </contacto>
+</contactos>
