@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<contactos>
+    <contacto>
+        <nombre>Fran Reyes Lopez</nombre>
+        <direccion>Calle Zurbaran</direccion>
+        <telefono>602043332</telefono>
+    </contacto>
+    <contacto>
+        <nombre>Julian Moreno Franco</nombre>
+        <direccion>Calle Pintor Greco</direccion>
+        <telefono>622443332</telefono>
+    </contacto>
+    <contacto>
+        <nombre>Juan Carlos Moreno </nombre>
+        <direccion>Calle Pintor Velaquez</direccion>
+        <telefono>7224344332</telefono>
+    </contacto>
+    <contacto>
+        <nombre>Paco Moreno Ponce</nombre>
+        <direccion>Calle Pintor Lopez</direccion>
+        <telefono>622441977</telefono>
+    </contacto>
+</contactos>
