@@ -5,4 +5,14 @@
         <direccion>Calle Zurbarán</direccion>
         <telefono>602043332</telefono>
     </contacto>
+    <contacto>
+        <nombre>Julian Moreno Franco</nombre>
+        <direccion>Calle Pintor Greco</direccion>
+        <telefono>622443332</telefono>
+    </contacto>
+    <contacto>
+        <nombre>Juan Carlos Moreno</nombre>
+        <direccion>Calle Pintor Velazquez</direccion>
+        <telefono>7224344332</telefono>
+    </contacto>
 </contactos>

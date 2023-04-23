@@ -28,9 +28,9 @@ public class Ejercicio11Escritura {
         contactos.appendChild(contacto);
         //Estos dos nuevos nodos contacto2 y 3 son pruebas para intentar conseguir la separación en cada nodo contacto correcto y que no aparezcan todos en un solo nodo
         Element contacto2 = document.createElement("contacto");
-        contactos.appendChild(contacto);
+        contactos.appendChild(contacto2);
         Element contacto3 = document.createElement("contacto");
-        contactos.appendChild(contacto);
+        contactos.appendChild(contacto3);
 
         //-----------------------------------------------------------------------
 

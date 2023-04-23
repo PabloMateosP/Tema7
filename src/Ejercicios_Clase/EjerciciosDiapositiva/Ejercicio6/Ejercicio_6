@@ -1,0 +1,29 @@
+- FileOutputStream:
+El uso de esta clase es para escribir bytes en un archivo en el sistema de archivos. Permite escribir datos binarios en un archivo.
+
+- BufferedOutputStream
+La clase BufferedOutputStream en Java se utiliza para mejorar el rendimiento al escribir datos en un archivo utilizando la clase FileOutputStream. Esta clase agrega un búfer en memoria intermedia entre el programa y el archivo
+
+- DataOutputStream
+La clase DataOutputStream en Java se utiliza para escribir datos primitivos en un archivo en el sistema de archivos. Esta clase proporciona métodos para escribir valores de tipos de datos primitivos como int, double, boolean, entre otros, así como también cadenas de caracteres.
+
+- ByteArrayOutputStream
+La clase ByteArrayOutputStream en Java se utiliza para escribir datos en un array de bytes en lugar de en un archivo en el sistema de archivos. Esta clase proporciona métodos para escribir datos en el array de bytes y obtener el array de bytes resultante.
+
+- PrintStream
+La clase PrintStream en Java se utiliza para escribir datos formateados en una variedad de tipos de salida, como archivos en el sistema de archivos, sockets de red, etc. Esta clase proporciona métodos para escribir datos en un flujo de salida en un formato legible por humanos, y también proporciona métodos para manejar excepciones y errores de manera conveniente.
+
+-  PipedOutputStream
+La clase PipedOutputStream en Java se utiliza en conjunción con la clase PipedInputStream para permitir la comunicación entre dos subprocesos a través de un tubo (pipe) en memoria. Esta clase proporciona métodos para escribir datos en el extremo de salida del tubo, que pueden ser leídos por el extremo de entrada del tubo.
+
+- FileInputStream
+La clase FileInputStream en Java se utiliza para leer datos de un archivo en el sistema de archivos. Esta clase proporciona métodos para leer bytes y caracteres del archivo, así como para manejar excepciones y errores de manera conveniente.
+
+-  BufferedInputStream
+La clase BufferedInputStream en Java se utiliza para mejorar el rendimiento al leer datos de un flujo de entrada, al almacenar en memoria un buffer temporal que permite la lectura de bloques de datos en lugar de leer byte por byte del flujo de entrada original.
+
+- DataInputStream
+La clase DataInputStream en Java se utiliza para leer datos primitivos de un flujo de entrada, en lugar de bytes individuales. Esta clase proporciona métodos convenientes para leer valores de tipos de datos primitivos, como int, double, boolean, entre otros, desde un flujo de entrada.
+
+- SequenceInputStream
+La clase SequenceInputStream en Java se utiliza para concatenar dos o más flujos de entrada (InputStream) en un solo flujo de entrada secuencial. Esto significa que puedes leer datos de múltiples flujos de entrada como si fueran un solo flujo de entrada.
