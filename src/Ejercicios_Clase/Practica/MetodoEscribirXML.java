@@ -1,8 +1,9 @@
-package Ejercicios_Clase.EjerciciosDiapositiva.Ejercicio11;
+package Ejercicios_Clase.Practica;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
+
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
@@ -12,25 +13,52 @@ import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 
-public class Ejercicio11Escritura {
-    public static void main(String[] args) throws ParserConfigurationException, TransformerException {
+public class MetodoEscribirXML {
+    static void MetodEscribirXml() throws ParserConfigurationException, TransformerException {
         // Creamos el documento vacío para añadirle a continuación los nodos
         // En este caso lo hago todo en una sola línea
         Document document = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder().newDocument();
 
         // Creamos el nodo raíz <contactos></contactos>
-        Element contactos= document.createElement("contactos");
+        Element contactos= document.createElement("daw1");
         // Hacemos que cuelgue del documento (estructura de árbol)
         document.appendChild(contactos);
 
-        // Creamos el primer nodo y lo colgamos de su padre, el nodo raíz. --> <contacto></contacto>
-        Element contacto = document.createElement("contacto");
+        // Creamos el primer nodo y lo colgamos de su padre, el nodo raíz. --> <alumno></alumno>
+        Element alumno = document.createElement("alumno");
+        contactos.appendChild(alumno);
+        Element alumno2 = document.createElement("alumno");
+        contactos.appendChild(alumno2);
+        Element alumno3 = document.createElement("alumno");
+        contactos.appendChild(alumno3);
+        Element alumno4 = document.createElement("alumno");
+        contactos.appendChild(alumno4);
+        Element alumno5 = document.createElement("alumno");
+        contactos.appendChild(alumno5);
+        Element alumno6 = document.createElement("alumno");
+        contactos.appendChild(alumno6);
+        Element alumno7 = document.createElement("alumno");
+        contactos.appendChild(alumno7);
+        Element alumno8 = document.createElement("alumno");
+        contactos.appendChild(alumno8);
+        Element alumno9 = document.createElement("alumno");
+        contactos.appendChild(alumno9);
+        Element alumno10 = document.createElement("alumno");
+        contactos.appendChild(alumno10);
+        Element alumno11 = document.createElement("alumno");
+        contactos.appendChild(alumno11);
+        Element alumno12 = document.createElement("alumno");
+        contactos.appendChild(alumno12);
+        Element contacto = document.createElement("alumno");
         contactos.appendChild(contacto);
-        //Estos dos nuevos nodos contacto2 y 3 son pruebas para intentar conseguir la separación en cada nodo contacto correcto y que no aparezcan todos en un solo nodo
-        Element contacto2 = document.createElement("contacto");
+        Element contacto2 = document.createElement("alumno");
         contactos.appendChild(contacto2);
-        Element contacto3 = document.createElement("contacto");
+        Element contacto3 = document.createElement("alumno");
         contactos.appendChild(contacto3);
+        Element contacto = document.createElement("alumno");
+        contactos.appendChild(contacto);
+        Element contacto2 = document.createElement("alumno");
+        contactos.appendChild(contacto2);
 
         //-----------------------------------------------------------------------
 

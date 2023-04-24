@@ -1,0 +1,4 @@
+1. Tenemos que hacer un main donde llamaremos los métodos, uno de ellos será escribir en el fichero y meter los parámetros que queremos mientras que otro será leer
+2. Según lo leído en el fichero deberemos hacer otros métodos:
+    - Uno de estos métodos es elegir un alumno aleatorio entre los que tengan menor participación
+    - Otro será escribir en el xml un punto más en la participación en caso de que esa sea correcta, restarla o dejarla igual.

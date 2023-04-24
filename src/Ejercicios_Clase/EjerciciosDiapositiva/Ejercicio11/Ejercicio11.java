@@ -63,6 +63,5 @@ public class Ejercicio11 {
         } catch(Exception e) { //No es buena práctica lanzar Exception, ya que no va a dar la información perteneciente a la verdadera excepción que es.
             e.printStackTrace();
         }
-
     }
 }
