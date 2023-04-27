@@ -27,6 +27,8 @@ public class MetodoEscribirXML {
         // Hacemos que cuelgue del documento (estructura de árbol)
         document.appendChild(contactos);
 
+        //Element a [] = {"alumno", "alumno2", "alumno3", "alumno4", "alumno5"};
+
         // Creamos el primer nodo y lo colgamos de su padre, el nodo raíz. --> <alumno></alumno>
         Element alumno = document.createElement("alumno");
         contactos.appendChild(alumno);
