@@ -47,7 +47,6 @@ public class EjemploEscrituraXML {
         // Se realiza la transformación, de Document a Fichero.
         transformer.transform(source, result);
     }
-
 }
 //A la hora de crear el nuevo archivo ficheroSalida.xml sale sin saltos de linea
 //Ctrl + Alt + L para formatear un archivo

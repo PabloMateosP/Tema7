@@ -14,7 +14,7 @@ import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 
 public class MetodoEscribirXML {
-    public static void main(String[] args) throws ParserConfigurationException, TransformerException {
+    public MetodoEscribirXML() throws ParserConfigurationException, TransformerException {
        // Creamos el documento vacío para añadirle a continuación los nodos
         // En este caso lo hago todo en una sola línea
         Document document = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder().newDocument();
@@ -71,7 +71,6 @@ public class MetodoEscribirXML {
         //Declaramos el nombre del alumno y el número de intervenciones de este
         String nombre1 = "Víctor";
         String nintervenciones1 = "0";
-
 
         //Creamos un nodo hijo de contacto que será <nombre></nombre>
         Element nombre1_ = document.createElement(nombre);
@@ -442,14 +441,12 @@ public class MetodoEscribirXML {
 
         //---------------------------------------------------------------------------
 
-
-
         // Clases necesarias para finalizar la creación del archivo XML
         TransformerFactory transformerFactory = TransformerFactory.newInstance();
         Transformer transformer = transformerFactory.newTransformer();
         DOMSource source = new DOMSource(document);
         //He tenido que usar la ruta absoluta, ya que mediante la ruta del documento no me lo encontraba y me daba error por ruta inespecífica
-        StreamResult result = new StreamResult(new File("C:\\Users\\pablo\\Desktop\\Tema7\\src\\Ejercicios_Clase\\Practica\\Daw1.xml"));
+        StreamResult result = new StreamResult(new File("src/Ejercicios_Clase/Practica/Daw1.xml"));
 
         // Se realiza la transformación, de Document a Fichero.
         transformer.transform(source, result);
