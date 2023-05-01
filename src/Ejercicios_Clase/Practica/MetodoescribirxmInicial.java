@@ -3,7 +3,6 @@ package Ejercicios_Clase.Practica;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
-
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.Transformer;
@@ -12,58 +11,66 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
+import java.util.Scanner;
 
-public class MetodoEscribirXML {
-    public MetodoEscribirXML() throws ParserConfigurationException, TransformerException {
-       // Creamos el documento vacío para añadirle a continuación los nodos
-        // En este caso lo hago todo en una sola línea
+public class MetodoescribirxmInicial {
+    public MetodoescribirxmInicial() throws ParserConfigurationException, TransformerException {
+        // Creamos el documento vacío para añadirle a continuación los nodos
         Document document = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder().newDocument();
 
-        // Creamos nodo Raíz
+        //Creamos un scanner con la ruta del archivo que crearemos
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Escriba la ruta donde se creará el archivo:");
+        String ruta  = sc.nextLine();
+
+        //Creamos un scanner con el nombre del archivo a crear
+        Scanner sc2 = new Scanner(System.in);
+        System.out.println("Escriba el nombre del archivo a crear: ");
+        String nombreArchivo = sc2.nextLine();
+
+        // Creamos el nodo Raíz
         String nodoRaiz = "daw1";
 
-        // Creamos el nodo raíz <contactos></contactos>
-        Element contactos= document.createElement(nodoRaiz);
+        // Creamos el nodo raíz <alumnos></alumnos>
+        Element alumnos= document.createElement(nodoRaiz);
         // Hacemos que cuelgue del documento (estructura de árbol)
-        document.appendChild(contactos);
-
-        //Element a [] = {"alumno", "alumno2", "alumno3", "alumno4", "alumno5"};
+        document.appendChild(alumnos);
 
         // Creamos el primer nodo y lo colgamos de su padre, el nodo raíz. --> <alumno></alumno>
         Element alumno = document.createElement("alumno");
-        contactos.appendChild(alumno);
+        alumnos.appendChild(alumno);
         Element alumno2 = document.createElement("alumno");
-        contactos.appendChild(alumno2);
+        alumnos.appendChild(alumno2);
         Element alumno3 = document.createElement("alumno");
-        contactos.appendChild(alumno3);
+        alumnos.appendChild(alumno3);
         Element alumno4 = document.createElement("alumno");
-        contactos.appendChild(alumno4);
+        alumnos.appendChild(alumno4);
         Element alumno5 = document.createElement("alumno");
-        contactos.appendChild(alumno5);
+        alumnos.appendChild(alumno5);
         Element alumno6 = document.createElement("alumno");
-        contactos.appendChild(alumno6);
+        alumnos.appendChild(alumno6);
         Element alumno7 = document.createElement("alumno");
-        contactos.appendChild(alumno7);
+        alumnos.appendChild(alumno7);
         Element alumno8 = document.createElement("alumno");
-        contactos.appendChild(alumno8);
+        alumnos.appendChild(alumno8);
         Element alumno9 = document.createElement("alumno");
-        contactos.appendChild(alumno9);
+        alumnos.appendChild(alumno9);
         Element alumno10 = document.createElement("alumno");
-        contactos.appendChild(alumno10);
+        alumnos.appendChild(alumno10);
         Element alumno11 = document.createElement("alumno");
-        contactos.appendChild(alumno11);
+        alumnos.appendChild(alumno11);
         Element alumno12 = document.createElement("alumno");
-        contactos.appendChild(alumno12);
+        alumnos.appendChild(alumno12);
         Element alumno13 = document.createElement("alumno");
-        contactos.appendChild(alumno13);
+        alumnos.appendChild(alumno13);
         Element alumno14 = document.createElement("alumno");
-        contactos.appendChild(alumno14);
+        alumnos.appendChild(alumno14);
         Element alumno15 = document.createElement("alumno");
-        contactos.appendChild(alumno15);
+        alumnos.appendChild(alumno15);
         Element alumno16 = document.createElement("alumno");
-        contactos.appendChild(alumno16);
+        alumnos.appendChild(alumno16);
         Element alumno17 = document.createElement("alumno");
-        contactos.appendChild(alumno17);
+        alumnos.appendChild(alumno17);
 
         String nombre = "nombre";
         String intervenciones = "intervenciones";
@@ -448,7 +455,7 @@ public class MetodoEscribirXML {
         Transformer transformer = transformerFactory.newTransformer();
         DOMSource source = new DOMSource(document);
         //He tenido que usar la ruta absoluta, ya que mediante la ruta del documento no me lo encontraba y me daba error por ruta inespecífica
-        StreamResult result = new StreamResult(new File("src/Ejercicios_Clase/Practica/Daw1.xml"));
+        StreamResult result = new StreamResult(new File(ruta + "/" + nombreArchivo + ".xml"));
 
         // Se realiza la transformación, de Document a Fichero.
         transformer.transform(source, result);

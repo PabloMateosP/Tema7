@@ -8,26 +8,27 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class MetodoLeerXML {
-    public MetodoLeerXML() {
-        // Cargamos el fichero xml de los alumnos que vamos a leer
-        //La forma de leer este fichero lo haremos introduciendo por scanner la ruta del archivo en el ordenador
+public class MetodoAleatorioAlumnInterv {
+    public static void main(String[] args) {
 
-        Scanner sc1 = new Scanner(System.in);
-        System.out.println("Introduzca el nombre de la clase:  ");
-        String clase = sc1.nextLine();
+        aleatoriedad();
+
+    }
+    static void aleatoriedad (){
+        //int i = (int) (Math.random() * 18);
+        //System.out.println(a[i]);
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Hola, por favor introduzca la ruta del archivo a leer: ");
+        System.out.println("Porfavor introduzca la ruta del archivo para comenzar la elección");
         String ruta = sc.nextLine();
 
-        System.out.println("-----------");
-        System.out.println(clase);
-        System.out.println("-----------");
-
         File file = new File(ruta);
+
+        String nombress = null;
+        String interv = null;
 
         try {
             // Parseamos el fichero al Document
@@ -39,23 +40,33 @@ public class MetodoLeerXML {
             NodeList nombre = document.getElementsByTagName("nombre");
             NodeList intervenciones = document.getElementsByTagName("intervenciones");
 
+
             // Recorremos todos esos nodos
             for (int i = 0; i < nombre.getLength(); i++) {
                 Node nodeName = nombre.item(i);
                 Node nodeIntervenciones = intervenciones.item(i);
                 // Filtramos todos los que son nodos de tipo elemento
                 if (nodeName.getNodeType() == Node.ELEMENT_NODE) {
-                    Element elementnombre = (Element) nodeName;
-                    System.out.println("Nombre del alumno: " + elementnombre.getTextContent());
+                    Element elementNombre = (Element) nodeName;
+                    //Guardamos los datos de los nombres así como las intervenciones en un tipo cadena
+                    //Le añadimos una coma para separar los elementos y así que funcione el método split
+                    nombress = elementNombre.getTextContent() + ",";
                     if (nodeIntervenciones.getNodeType() == Node.ELEMENT_NODE) {
-                        Element elementintervenciones = (Element) nodeIntervenciones;
-                        System.out.println("Número de Intervenciones: " + elementintervenciones.getTextContent());
+                        Element elementIntervenciones = (Element) nodeIntervenciones;
+                        interv = elementIntervenciones.getTextContent() + ",";
                     }
                 }
-                System.out.println("-----------");
             }
-        } catch(Exception e) { //No es buena práctica lanzar Exception, ya que no va a dar la información perteneciente a la verdadera excepción que es.
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+        //En esta parte pasamos todos los nombres e intervenciones en dos arrays diferentes
+        String intervenciones [] = interv.split(",");
+        String nombres [] = nombress.split(",");
+
+        int i  = (int) Math.random() * nombres.length;
+        System.out.println(nombres[i]);
+
     }
 }
