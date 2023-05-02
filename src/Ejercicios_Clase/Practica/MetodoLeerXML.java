@@ -11,7 +11,7 @@ import java.io.File;
 import java.util.Scanner;
 
 public class MetodoLeerXML {
-    public MetodoLeerXML() {
+    public static void metodoLeerXML() {
         // Cargamos el fichero xml de los alumnos que vamos a leer
         //La forma de leer este fichero lo haremos introduciendo por scanner la ruta del archivo en el ordenador
 

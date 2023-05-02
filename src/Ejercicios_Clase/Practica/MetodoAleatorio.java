@@ -8,6 +8,10 @@ import java.util.Scanner;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -15,7 +19,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 public class MetodoAleatorio {
-    public static void main(String[] args) {
+    public static void metodoAleatorio() {
         Scanner scc = new Scanner(System.in);
         System.out.println("Escriba la ruta del archivo");
         String ruta = scc.nextLine();
@@ -70,7 +74,54 @@ public class MetodoAleatorio {
 
             // Obtener el nombre del alumno correspondiente al índice elegido
             String alumnoElegido = nombres[randomIndex];
-            System.out.println("El alumno elegido aleatoriamente es: " + alumnoElegido);
+            System.out.println("El alumno elegido es: " + alumnoElegido);
+
+            //En este caso definimos si lo que ha hecho el alumno ha sido correcto o no y le damos la opción al profesor de cambiar las intervenciones del alumno
+            Scanner punto = new Scanner(System.in);
+            System.out.println("¿Ha sido correcta la corrección del alumno? \n-En caso de que haya sido correcto pulse s \n-En caso de que haya sido incorrecto pulse n \n-En caso de que no quiera cambiar sus intervenciones pulse o");
+            String puntuation = punto.nextLine();
+
+            if (puntuation.equals("s")) {
+                // Cargar el archivo XML
+                File archivo2Xml = new File(ruta);
+                DocumentBuilderFactory db2Factory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dB2uilder = db2Factory.newDocumentBuilder();
+                Document doc2 = dB2uilder.parse(archivoXml);
+
+                // Encontrar el nodo "alumno" correspondiente al alumno elegido
+                NodeList lista2Alumnos = doc2.getElementsByTagName("alumno");
+                Element elementoAlumnoElegido = null;
+                for (int i = 0; i < lista2Alumnos.getLength(); i++) {
+                    Node nodoAlumno = lista2Alumnos.item(i);
+                    if (nodoAlumno.getNodeType() == Node.ELEMENT_NODE) {
+                        Element elementoAlumno = (Element) nodoAlumno;
+                        String nombreAlumno = elementoAlumno.getElementsByTagName("nombre").item(0).getTextContent();
+                        if (nombreAlumno.equals(alumnoElegido)) {
+                            elementoAlumnoElegido = elementoAlumno;
+                            break;
+                        }
+                    }
+                }
+                if (elementoAlumnoElegido == null) {
+                    System.out.println("Error: no se encontró el nodo correspondiente al alumno elegido.");
+                    return;
+                }
+
+                // Agregamos un punto de participación adicional para el alumno elegido
+                String intervencionesAnteriores = elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).getTextContent();
+                int participaciones = Integer.parseInt(intervencionesAnteriores) + 1;
+                elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).setTextContent(Integer.toString(participaciones));
+                //En este caso supuestamente debería de añadir el punto aunque no consigo encontrar el porqué de que no lo introduzca como tal
+
+
+                // Finalmente, guardamos el documento XML actualizado en el archivo correspondiente
+                TransformerFactory transformerFactory = TransformerFactory.newInstance();
+                Transformer transformer = transformerFactory.newTransformer();
+                DOMSource source = new DOMSource(doc);
+                StreamResult result = new StreamResult(new File(ruta));
+                transformer.transform(source, result);
+            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

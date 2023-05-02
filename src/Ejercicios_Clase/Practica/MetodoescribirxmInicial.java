@@ -14,7 +14,7 @@ import java.io.File;
 import java.util.Scanner;
 
 public class MetodoescribirxmInicial {
-    public MetodoescribirxmInicial() throws ParserConfigurationException, TransformerException {
+    public static void metodoescribirxmInicial() throws ParserConfigurationException, TransformerException {
         // Creamos el documento vacío para añadirle a continuación los nodos
         Document document = DocumentBuilderFactory.newDefaultInstance().newDocumentBuilder().newDocument();
 
