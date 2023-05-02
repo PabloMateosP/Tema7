@@ -8,10 +8,9 @@ import org.w3c.dom.NodeList;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import java.io.File;
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class MetodoAleatorioAlumnInterv {
+public class MetodoAleatorioPrimerIntento {
     public static void main(String[] args) {
 
         aleatoriedad();

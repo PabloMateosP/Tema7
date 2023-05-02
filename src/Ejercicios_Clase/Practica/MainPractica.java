@@ -8,9 +8,9 @@ public class MainPractica {
 
         System.out.println("BIENVENIDO !! \nUsted va a entrar en el programa creado por el grupo INT JUAN. \nEste programa tiene la función de elegir un alumno entre los que posean una menor cantidad de intervenciones para la corrección de tareas en clase, \nteniendo la posibilidad el profesor de exportar estos datos a un archivo xml");
 
-        //MetodoEscribirXML daw1 = new MetodoEscribirXML();
+        //MetodoescribirxmInicial escribir = new MetodoescribirxmInicial();
 
-        //MetodoLeerXML daw1_ = new MetodoLeerXML(clase);
+        MetodoLeerXML daw1_ = new MetodoLeerXML();
         
     }
 }
