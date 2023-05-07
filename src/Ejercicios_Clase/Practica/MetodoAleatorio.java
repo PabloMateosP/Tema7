@@ -100,7 +100,7 @@ public class MetodoAleatorio {
                 String intervencionesAnteriores = elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).getTextContent();
                 int participaciones = Integer.parseInt(intervencionesAnteriores) + 1;
                 elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).setTextContent(Integer.toString(participaciones));
-                //En este caso supuestamente debería de añadir el punto aunque no consigo encontrar el porqué de que no lo introduzca como tal
+
 
                 System.out.println("Le ha sido añadida una intervención al alumno");
 
@@ -110,6 +110,7 @@ public class MetodoAleatorio {
                 DOMSource source = new DOMSource(doc);
                 StreamResult result = new StreamResult(new File(ruta));
                 transformer.transform(source, result);
+
             } else if (puntuation.equals("n")) {
                 // Encontrar el nodo "alumno" correspondiente al alumno elegido
                 Element elementoAlumnoElegido = null;
@@ -143,6 +144,7 @@ public class MetodoAleatorio {
                 DOMSource source = new DOMSource(doc);
                 StreamResult result = new StreamResult(new File(ruta));
                 transformer.transform(source, result);
+
             } else if (puntuation.equals("o")) {
                 System.out.println("Se deja la nota igual");
             } else{
