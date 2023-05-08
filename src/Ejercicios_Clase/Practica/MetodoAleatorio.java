@@ -85,6 +85,8 @@ public class MetodoAleatorio {
                     if (nodoAlumno.getNodeType() == Node.ELEMENT_NODE) {
                         Element elementoAlumno = (Element) nodoAlumno;
                         String nombreAlumno = elementoAlumno.getElementsByTagName("nombre").item(0).getTextContent();
+                        //Mediante esta variable string cogemos el valor en el nodo nombre
+                        //Mediante .item cogemos el valor 0 de ese nodo nombre (especificado mediante getElementByTagName) ejemplo Victor
                         if (nombreAlumno.equals(alumnoElegido)) {
                             elementoAlumnoElegido = elementoAlumno;
                             break;
@@ -100,7 +102,8 @@ public class MetodoAleatorio {
                 String intervencionesAnteriores = elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).getTextContent();
                 int participaciones = Integer.parseInt(intervencionesAnteriores) + 1;
                 elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).setTextContent(Integer.toString(participaciones));
-
+                //Mediante esta última línea editamos las intervenciones anteriores dejando las nuevas,
+                //gracias al setTextContent añadimos los nuevos valores en el nodo intervenciones
 
                 System.out.println("Le ha sido añadida una intervención al alumno");
 
@@ -119,6 +122,8 @@ public class MetodoAleatorio {
                     if (nodoAlumno.getNodeType() == Node.ELEMENT_NODE) {
                         Element elementoAlumno = (Element) nodoAlumno;
                         String nombreAlumno = elementoAlumno.getElementsByTagName("nombre").item(0).getTextContent();
+                        //Mediante esta variable string cogemos el valor en el nodo nombre
+                        //Mediante .item cogemos el valor 0 de ese nodo nombre (especificado mediante getElementByTagName) ejemplo Victor
                         if (nombreAlumno.equals(alumnoElegido)) {
                             elementoAlumnoElegido = elementoAlumno;
                             break;
