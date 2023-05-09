@@ -83,13 +83,16 @@ public class MetodoAleatorio {
                 for (int i = 0; i < listaAlumnos.getLength(); i++) {
                     Node nodoAlumno = listaAlumnos.item(i);
                     if (nodoAlumno.getNodeType() == Node.ELEMENT_NODE) {
-                        Element elementoAlumno = (Element) nodoAlumno;
+                        Element elementoAlumno = (Element) nodoAlumno; //Aquí hacemos casting para que pasar el nodo al tipo elemento
                         String nombreAlumno = elementoAlumno.getElementsByTagName("nombre").item(0).getTextContent();
                         //Mediante esta variable string cogemos el valor en el nodo nombre
                         //Mediante .item cogemos el valor 0 de ese nodo nombre (especificado mediante getElementByTagName) ejemplo Victor
                         if (nombreAlumno.equals(alumnoElegido)) {
+                            //Comparamos el nombre del alumno con el nombre del alumno elegido aleatoriamente
+
+                            //Si coinciden asignamos el elemento de alumno a la variable elementoAlumnoElegido
                             elementoAlumnoElegido = elementoAlumno;
-                            break;
+                            break; //Salimos del bucle dejando el elemento alumno elegido en la variable declarada entes del bucle
                         }
                     }
                 }
@@ -98,8 +101,11 @@ public class MetodoAleatorio {
                     System.out.println("Error: no se encontró el nodo correspondiente al alumno elegido.");
                     return;
                 }
+
                 // Agregamos un punto de participación adicional para el alumno elegido
+
                 String intervencionesAnteriores = elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).getTextContent();
+                //Sacamos el valor de las intervenciones del alumno elegido y después las parseamos como Integer para sumarle un punto
                 int participaciones = Integer.parseInt(intervencionesAnteriores) + 1;
                 elementoAlumnoElegido.getElementsByTagName("intervenciones").item(0).setTextContent(Integer.toString(participaciones));
                 //Mediante esta última línea editamos las intervenciones anteriores dejando las nuevas,
