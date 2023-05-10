@@ -74,7 +74,8 @@ public class MetodoAleatorio {
 
             //En este caso definimos si lo que ha hecho el alumno ha sido correcto o no y le damos la opción al profesor de cambiar las intervenciones del alumno
             Scanner punto = new Scanner(System.in);
-            System.out.println("\n¿Ha sido correcta la corrección del alumno? \n-En caso de que haya sido correcto pulse s \n-En caso de que haya sido incorrecto pulse n \n-En caso de que no quiera cambiar sus intervenciones pulse o");
+            System.out.println("\n¿Ha sido correcta la corrección del alumno? \n-En caso de que haya sido correcto pulse s " +
+                    "\n-En caso de que haya sido incorrecto pulse n \n-En caso de que no quiera cambiar sus intervenciones pulse o");
             String puntuation = punto.nextLine();
 
             if (puntuation.equals("s")) {

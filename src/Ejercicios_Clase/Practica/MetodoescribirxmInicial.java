@@ -88,7 +88,7 @@ public class MetodoescribirxmInicial {
         Text nombre_1 = document.createTextNode(nombre1);
         nombre1_.appendChild(nombre_1);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
+
         Element intervenciones1 = document.createElement(intervenciones);
         alumno.appendChild(intervenciones1);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -110,7 +110,7 @@ public class MetodoescribirxmInicial {
         Text nombre_2 = document.createTextNode(nombre2);
         nombre2_.appendChild(nombre_2);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
+
         Element intervenciones2 = document.createElement(intervenciones);
         alumno2.appendChild(intervenciones2);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -154,7 +154,7 @@ public class MetodoescribirxmInicial {
         Text nombre_4 = document.createTextNode(nombre4);
         nombre4_.appendChild(nombre_4);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
+
         Element intervenciones4 = document.createElement(intervenciones);
         alumno4.appendChild(intervenciones4);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -176,7 +176,6 @@ public class MetodoescribirxmInicial {
         Text nombre_5 = document.createTextNode(nombre5);
         nombre5_.appendChild(nombre_5);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones5 = document.createElement(intervenciones);
         alumno5.appendChild(intervenciones5);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -198,7 +197,6 @@ public class MetodoescribirxmInicial {
         Text nombre_6 = document.createTextNode(nombre6);
         nombre6_.appendChild(nombre_6);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones6 = document.createElement(intervenciones);
         alumno6.appendChild(intervenciones6);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -220,7 +218,6 @@ public class MetodoescribirxmInicial {
         Text nombre_7 = document.createTextNode(nombre7);
         nombre7_.appendChild(nombre_7);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones7 = document.createElement(intervenciones);
         alumno7.appendChild(intervenciones7);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -242,7 +239,6 @@ public class MetodoescribirxmInicial {
         Text nombre_8 = document.createTextNode(nombre8);
         nombre8_.appendChild(nombre_8);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones8 = document.createElement(intervenciones);
         alumno8.appendChild(intervenciones8);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -264,7 +260,6 @@ public class MetodoescribirxmInicial {
         Text nombre_9 = document.createTextNode(nombre9);
         nombre9_.appendChild(nombre_9);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones9 = document.createElement(intervenciones);
         alumno9.appendChild(intervenciones9);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -286,7 +281,6 @@ public class MetodoescribirxmInicial {
         Text nombre_10 = document.createTextNode(nombre10);
         nombre10_.appendChild(nombre_10);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones10 = document.createElement(intervenciones);
         alumno10.appendChild(intervenciones1);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -308,7 +302,6 @@ public class MetodoescribirxmInicial {
         Text nombre_11 = document.createTextNode(nombre11);
         nombre11_.appendChild(nombre_11);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones11 = document.createElement(intervenciones);
         alumno11.appendChild(intervenciones11);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -330,7 +323,6 @@ public class MetodoescribirxmInicial {
         Text nombre_12 = document.createTextNode(nombre12);
         nombre12_.appendChild(nombre_12);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones12 = document.createElement(intervenciones);
         alumno12.appendChild(intervenciones12);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -352,7 +344,6 @@ public class MetodoescribirxmInicial {
         Text nombre_13 = document.createTextNode(nombre13);
         nombre13_.appendChild(nombre_13);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones13 = document.createElement(intervenciones);
         alumno13.appendChild(intervenciones13);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -374,7 +365,6 @@ public class MetodoescribirxmInicial {
         Text nombre_14 = document.createTextNode(nombre14);
         nombre14_.appendChild(nombre_14);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones14 = document.createElement(intervenciones);
         alumno14.appendChild(intervenciones14);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
@@ -396,7 +386,6 @@ public class MetodoescribirxmInicial {
         Text nombre_15 = document.createTextNode(nombre15);
         nombre15_.appendChild(nombre_15);
 
-        //Creamos un nodo hijo de contacto que será <direccion></direccion>
         Element intervenciones15 = document.createElement(intervenciones);
         alumno15.appendChild(intervenciones15);
         // Creamos un nodo de texto que será el valor del elemento anterior nombre
